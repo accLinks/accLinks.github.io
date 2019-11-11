@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FishGame</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    </head>
+    <body class="wrapper">
+        <div class="homeScreen">
+            <div class="playMenu" onclick="playClick()">Play</div>
+            <div class="statsMenu" onclick="statsClick()">Stats</div>
+            <div class="shopMenu" onclick="shopClick()">Shop</div>
+            <div class="gearMenu" onclick="gearClick()">Gear</div>
+        </div>
+            <div class="consoleScreen"  class="consoleHeight" ><span id="consoleUpdate">Console</span><br></div>
+            <div class="adminScreen">
+                Accouncements:
+                <br>-Game has been launched
+            </div>
+        <div class="hideScreen offWhite" id="hidePlayScreenId"><div class="zoneScreen"><input type="radio" name="homeChoice" id="fishScreen" value="fishHome">Morrocan Lake</input>
+            
+            <br><div  class="selectZoneButton" onclick="homeBtn()">Select</div></div>
+            <div class="playMenu" onclick="playClick()">Return</div>
+        </div>
+        <div class="statsScreen statsScreenOffWhite hideScreenStats" id="hideStatsScreenId">
+            <h1>Stats</h1>
+            <p>Total Fish Cought: <span id="totalFishC"></span></p>
+            <p>[Common]Total Common Carmp Cought: <span  id="totalCommonCarpC"></span></p>
+            <p>[Uncommon]Total Rainbow Trout Cought: <span id="totalRainbowTroutC"></span></p>
+            <p>[Rare]Total Clown Fish Cought: <span id="totalClownFishC"></span></p>
+            <p>Total golden Dinnar: <span id="totalMoney"></span></p>
+            <div class="playMenu" onclick="statsClick()">Return</div>
+            
+        </div>
+		<div id="shopScreenId" class="shopScreenOffWhite hideScreenShop">
+            <div class="sellChoiceButtonOnClickShop" onclick="sellPageClick()"><span class="sellChoiceButtonOnClickShopExtra">Sell</span></div>
+            <div class="buyChoiceButtonOnClickShop" onclick="buyPageClick()"><span class="buyChoiceButtonOnClickShopExtra">Buy</span></div>
+            <div class="playMenu" onclick="shopClick()">Return</div>
+        </div>
+        <div id="shopScreenId2" class="shopScreenOffWhite2 hideScreenShop2">     
+                <h1 class="sellLookOnShop">Sell</h1>
+                <div class="sellBackgroundCC"><span class="cCPosition"><input type="radio" name="sell" value="sellCommonCarp" id="sellCommonCarp">Common Carp</input></span></div>
+                <div class="sellBackgroundRT"><span class="cCPosition"><input type="radio" name="sell" value="sellRainbowTrout" id="sellRainbowTrout">Rainbow Trout</input></span></div>
+                <div class="sellBackgroundCF"><span class="cCPosition"><input type="radio" name="sell" value="sellClownFish" id="sellClownFish">Clown Fish</input></span></div>
+                <span class="sellButtonPosition"><button onclick="sell()">Sell</button></span>
+                <div class="playMenu" onclick="sellPageClick()">Return</div>
+        </div>
+
+        <div id="shopScreenId3" class="shopScreenOffWhite3 hideScreenShop3">
+                <h1 class="sellLookOnShop">Buy</h1>
+                <div class="sellBackgroundCC"><span class="cCPosition MROneText"><input type="radio" name="buy" value="moorocanRodOne" id="morrocanRodOne">Morrocan Rod (One)</input></span></div>
+                <div class="sellBackgroundRT"><span class="cCPosition"><input type="radio" name="buy" value="premimumRod" id="premimumRod">Premimum Rod</input></span></</div>
+                <button class="buyButtonPosition" onclick="buy()">Buy</button>
+                <div class="returnButtonPositionOnBuyPage" onclick="buyPageClick()">Return</div>
+        </div>
+
+        <div id="gearChangeScreenId" class="gearScreenOffWhite hideScreenGear">
+            <h1>Gear</h1>
+            <input type="radio" name="wearRod" value="useBRod" id="useBRod">Basic Rod</input>
+            <br><input type="radio" name="wearRod" value="useRodMRodOne" id="useMRodOne">Morrocan Rod (One) - [Increases rate of uncommon]</input>
+            <br><input type="radio" name="wearRod" value="usePRod" id="usePRod">Premimum Rod - [Increases rate of rare]</input>
+            <br><button onclick="gear()">Wear</button>
+            <div class="playMenu" onclick="gearClick()">Return</div>
+        </div>
+    </body>
+    <script rel="text/javascript" src="script.js"></script>
+</html>
+<!--     
+<div id="shopScreenId2" class="shopScreenOffWhite hideScreenShop">     
+    <h1 class="sellLookOnShop">Sell</h1>
+    <div class="sellBackgroundCC"><span class="cCPosition"><input type="radio" name="sell" value="sellCommonCarp" id="sellCommonCarp">Common Carp</input></span></div>
+    <div class="sellBackgroundRT"><span class="cCPosition"><input type="radio" name="sell" value="sellRainbowTrout" id="sellRainbowTrout">Rainbow Trout</input></span></div>
+    <div class="sellBackgroundCF"><span class="cCPosition"><input type="radio" name="sell" value="sellClownFish" id="sellClownFish">Clown Fish</input></span></div>
+    <span class="sellButtonPosition"><button onclick="sell()">Sell</button></span>
+    <div class="playMenu" onclick="statsClick()">Return</div>
+</div>
+<div id="shopScreenId3" class="shopScreenOffWhite3 hideScreenShop3">
+<h1>Buy</h1>
+<input type="radio" name="buy" value="moorocanRodOne" id="morrocanRodOne">Morrocan Rod (One)</input>
+<br><input type="radio" name="buy" value="premimumRod" id="premimumRod">Premimum Rod</input>
+<br><button onclick="buy()">Buy</button> 
+</div>
+
+*/ -->
