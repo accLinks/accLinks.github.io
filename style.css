@@ -1,359 +1,187 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
+.backgroundBodyColor{
+    background: #F9F9F9;
     height: 100vh;
 }
-
-.wrapper{
-    background: #212121;
-}
-
-.homeScreen{
-    background: #313138;
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: 60px;
-    left: 120px;
-}
-.consoleScreen{
-    background: #313138;
-    border: 2px solid #000000;
-    height: 350px;
-    width: 500px;
-    position: relative;
-    left: 1100px;
-    top: -350px;
-    color: #f72f2f;
-	overflow-y: scroll;
-	font-family: 'Varela Round', sans-serif;
-}
-.adminScreen{
-    background: #313138;
-    border: 2px solid #000000;
-    height: 250px;
-    width: 800px;
-    position: relative;
-    top: -200px;
-    left: 120px;
-    color: #7a51fc;
-}
-.playMenu{
-    height: 50px;
-    width: 350px;
-    background-color: #212121;
-    border: 2px solid #000000;
-    font-family: 'Rajdhani', sans-serif;
-    border-radius: 2px;
-    position: relative;
-    left: 200px;
-    top: 80px;
-    text-align: center;
-    font-size: 40px;
-    color: #2c7a50;
-    display: block;
-}
-.playMenu:hover{
-    background: #407056;
-    color: #212121;
-    cursor: help;
-}
-.statsMenu{
-    height: 50px;
-    width: 350px;
-    background-color: #212121;
-    font-family: 'Rajdhani', sans-serif;
-    border: 2px solid #000000;
-    border-radius: 2px;
-    position: relative;
-    left: 200px;
-    top: 100px;
-    text-align: center;
-    font-size: 40px;
-    color: #2c7a50;
-}
-.statsMenu:hover{
-    background: #407056;
-    color: #212121;
-    cursor: help;
-}
-.shopMenu{
-    height: 50px;
-    width: 350px;
-    background-color: #212121;
-    font-family: 'Rajdhani', sans-serif;
-    border-radius: 2px;
-    border: 2px solid #000000;
-    position: relative;
-    left: 200px;
-    top: 120px;
-    text-align: center;
-    font-size: 40px;
-    color: #2c7a50;
-}
-.shopMenu:hover{
-    background: #407056;
-    color: #212121;
-    cursor: help;
-}
-.gearMenu{
-    height: 50px;
-    width: 350px;
-    background-color: #212121;
-    border: 2px solid #000000;
-    font-family: 'Rajdhani', sans-serif;
-    border-radius: 2px;
-    position: relative;
-    left: 200px;
-    top: 140px;
-    text-align: center;
-    font-size: 40px;
-    color: #2c7a50;
-}
-.gearMenu:hover{
-    background: #407056;
-    color: #212121;
-    cursor: help;
-}
-.hideScreen{
-    display: none;
-}
-.hideScreenStats{
-    display: none;
-}
-.hideScreenShop{
-    display: none;
-}
-.hideScreenGear{
-    display: none;
-}
-.hideScreenShop2{
-    display: none;
-}
-.offWhite {  
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1002px;
-    left: 120px;
-}
-.statsScreenOffWhite{
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1002px;
-    left: 120px;
-}
-.shopScreenOffWhite{
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1002px;
-    left: 120px;
-}
-.gearScreenOffWhite{
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1002px;
-    left: 120px;   
-}
-.shopScreenOffWhite2{
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1456px;
-    left: 120px;   
-}
-.shopScreenOffWhite3{
-    background: #313138; 
-    border: 2px solid #000000;
-    height: 450px;
-    width: 800px;
-    position: relative;
-    top: -1456px;
-    left: 120px;   
-}
-.hideScreenShop3{
-    display: none;
-}
-.consoleHeight{
-    height: 350px;
-}
-.selectZoneButton{
-    width: 200px;
-    height: 20px;
-    background-color: #212121;
-    display: block;
-    text-align: center;
-    border-radius: 1px;
-    border: 1px solid #000000;
-    color: #ffffff;
-}
-.selectZoneButton:hover{
-    color: #cf1919;
-    
-}
-.zoneScreen{
+.mainBox{
+    background-color: #EEEEEE;
+    width: 976px;
+    height: 700px;
+    border: 10px solid #00B9FF;
     position: relative;
     top: 50px;
-    left: 260px;
-    font-family: 'Rajdhani', sans-serif;
-    color: #ffffff;
+
+    /*This is the color for main box and height along with width*/
 }
-.sellBackgroundCC{
-    background-color: #24282A;
-    color: #ff3d3d;
-    width: 160px;
+.secondBox{
+    background-color: #EEEEEE;
+    width: 728px;
+    height: 700px;
+    border: 10px solid #00B9FF;
+    position: relative;
+    top: -670px;
+    left: 1100px;
+    /*css for the second box(console and news)*/
+}
+.navMenu{
+    background-color: #534B4B;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.playBar{
+
+}
+.playBar{
+    background-color: #EEEEEE;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    background: #383838;
+    width: 400px;
     height: 70px;
-    
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 17px;
+    font-size: 40px;
+    position: relative;
+    left: 285px;
+    top:110px;
+    color: #ffffff;
+    border: 3px solid #000000;
+    display: block;
+}
+.playBar:hover{
+    background: #ffffff;
+    color: #383838;
+}
+.clickBorder{
+    border: 6px solid #ffc663;
+}
+.mainBox2{
+    background-color: #EEEEEE;
+    width: 976px;
+    height: 700px;
+    border: 10px solid #00B9FF;
+    position: relative;
+    top: -1390px;
+
+    /*copy of main box*/
+}
+.screen{
+    display: none;
+}
+.returnBar{
+    background-color: #EEEEEE;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    background: #383838;
+    width: 400px;
+    height: 70px;
+    font-size: 40px;
+    position: relative;
+    left: 285px;
+    color: #ffffff;
+    border: 3px solid #000000;
+    display: block;
+}
+.returnBar:hover{
+    background: #ffffff;
+    color: #383838;
+}
+.sell{
+    background: #383838;
+    width: 400px;
+    height: 150px;
+    font-size: 80px;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
     position: relative;
     left: 25px;
-    display: block;
+    top: 50px;
+    border: 3px solid #000000;
+    color: #ff4f0f;
+}
+.buy{
+    background: #383838;
+    width: 400px;
+    height: 150px;
+    font-size: 80px;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    position: relative;
+    left: 545px;
+    top: -105px;
+    border: 3px solid #000000;
+    color: #005eff;
+}
+.sell:hover{
+    background: #ffffff;
+    color: #383838;
+}
+.buy:hover{
+    background: #ffffff;
+    color: #383838;
+}
+.mainBox3{
+    background-color: #EEEEEE;
+    width: 976px;
+    height: 700px;
+    border: 10px solid #00B9FF;
+    position: relative;
+    top: -2110px;
+}
+.moroccanLakeButton{
+	background: #383838;
+	width: 300px;
+	height: 100px;
+	border-radius: 5px;
+	border: 5px solid #000000;
+	position: relative;
+	left: 25px;
+	top: 25px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Cairo', sans-serif;
+}
+.moroccanLakeButton:hover{
+	background: #ffffff;
+    color: #383838;
+	font-family: 'Cairo', sans-serif;
+}
+.moroccanLakeName{
+	text-align: center;
+	font-family: 'Cairo', sans-serif;
+}
+.submitButton{
+	background: #383838;
+	width: 200px;
+	height: 29px;
+	border-radius: 5px;
+	border: 5px solid #000000;
+	position: relative;
+	left: 25px;
+	top: 25px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 19px;
+	font-family: 'Cairo', sans-serif;
+	display: block;
+}
+.submitButton:hover{
+	background: #ffffff;
+	color: #383838;
+}
+.rodName{
+	font-size: 19px;
+	font-family: 'Cairo', sans-serif;
 }
 
-.sellBackgroundRT{
-    background-color: #24282A;
-    color: #ff3d3d;
-    width: 160px;
-    height: 70px;
-    
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 17px;
-    position: relative;
-    left: 225px;
-    top: -74px;
-    display: block;
-}
 
-.sellBackgroundCF{
-    background-color: #24282A;
-    color: #ff3d3d;
-    width: 160px;
-    height: 70px;
-    
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 17px;
-    position: relative;
-    left: 425px;
-    top: -148px;
-    display: block;
-}
-.cCPosition{
-    position: relative;
-    top: 25px;
-    left: 20px;
-    font-family: 'Rajdhani', sans-serif;
-}
-.sellLookOnShop{
-    color: #858585;
-    font-family: 'Rajdhani', sans-serif;
-    height: 50px;
-    text-align: center;
-}
-.sellButtonPosition{
-    position: relative;
-    left: 750px;
-    top: -190px;
-    
-}
-.sellChoiceButtonOnClickShop{
-    background-color: #24282A;
-    color: #ff3d3d;
-    width: 260px;
-    height: 140px;
-    
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 17px;
-    text-align: center;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 80px;
-    display: block;
-    position: relative;
-    top: 80px;
-    left: 90px;
-    
-}
-.sellChoiceButtonOnClickShop:hover{
-    background-color: #ff3d3d;
-    color: #24282A;
-}
-.sellChoiceButtonOnClickShopExtra{
-    position: relative;
-    top: 25px;
-}
-.buyChoiceButtonOnClickShop{
-    background-color: #24282A;
-    color: #7a51fc;
-    width: 260px;
-    height: 140px;
-    
-    border: 2px solid #000000;
-    border-radius: 5px;
-    font-size: 17px;
-    text-align: center;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 80px;
-    display: block;
-    position: relative;
-    top: -65px;
-    left: 450px;
-    
-}
-.buyChoiceButtonOnClickShop:hover{
-    background-color: #7a51fc;
-    color: #24282A;
-}
-.buyChoiceButtonOnClickShopExtra{
-    position: relative;
-    top: 25px;
-    
-}
-.buyButtonPosition{
-    position: relative;
-    left: 375px;
-    top: 20px;
-}
-.returnButtonPositionOnBuyPage{
-    height: 50px;
-    width: 350px;
-    background-color: #212121;
-    border: 2px solid #000000;
-    font-family: 'Rajdhani', sans-serif;
-    border-radius: 2px;
-    position: relative;
-    left: 0px;
-    top: 280px;
-    text-align: center;
-    font-size: 40px;
-    color: #2c7a50;
-    display: block;
-}
-.returnButtonPositionOnBuyPage:hover{
-    background: #407056;
-    color: #212121;
-    cursor: help;
-}
-.MROneText{
-    font-size: 15px;
-}
+
+
+
+
+
+
+
+
+
+
