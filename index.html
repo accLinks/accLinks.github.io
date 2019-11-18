@@ -15,17 +15,24 @@ font-family: 'Cairo', sans-serif;-->
             <h1 class="playBar" onclick="inventoryFunction()">Inventory</h1>
         </div><!--Creates a main box for player to do things-->
         <div class="secondBox">
-			<div class="consoleInput"></div>
+			<div class="consoleInput" id="consoleText"></div>
 		</div><!--Creates a div for a second box for console and news-->
         <div class="mainBox2 screen" id="playBox">
 		     <div class="moroccanLakeButton" onclick="moroccanLakeFunction()">Moroccan Lake</div>
             <h1 class="returnBar"onclick="playFunction()">Return</h1>
         </div>
-        <div class="mainBox2 screen" id="infoBox">
+        <div class="mainBox2 screen" id="infoBox"><!--Info-->
+                <div>
+                        <p id="totalFishCoughtStats">Total Fish Cought: 0</p></br>
+                        <p id="totalCCCStats">Total Common Carps Cought: 0</p></br>
+                        <p id="totalGGMCStats">Total Golden Grey Mullet Cought: 0</p></br>
+                        <p id="totalBTCStats">Total Blue Tang Cought: 0</p>   </br>                 
+                        <p id="totalDinarStats">Total Dinar: 0</p>
+                    </div>   
             <h1 class="returnBar"onclick="infoFunction()">Return</h1>
         </div>
         <div class="mainBox2 screen" id="shopBox">
-            
+
                 <div class="sell" onclick="sellBoxFunction()">Sell</div>
                 <div class="buy" onclick="buyBoxFunction()">Buy</div>
 
@@ -34,17 +41,39 @@ font-family: 'Cairo', sans-serif;-->
         <div class="mainBox2 screen" id="inventoryBox">
             <h1 class="returnBar"onclick="inventoryFunction()">Return</h1>
         </div>
-        <div class="mainBox3 screen" id="sellBox">        
+        <div class="mainBox3 screen" id="sellBox">     
+            <!--Sell-->
+            <h1 class="moroccanLakeName">Sell Page</h1>
+            <p id="sellCCID" class="sellBoxLook" onclick="sellCCFunction()">Common Carp</p>
+            <p id="sellGGMID"class="sellBoxLook" onclick="sellGGMFunction()">Golden Grey Mullet</p>
+            <p id="sellBTID"class="sellBoxLook" onclick="sellBTFunction()">Blue Tang</p>
             <h1 class="returnBar"onclick="sellBoxFunction()">Return</h1>
         </div>
-        <div class="mainBox3 screen" id="buyBox">        
-                <h1 class="returnBar"onclick="buyBoxFunction()">Return</h1>
+        <div class="mainBox3 screen" id="buyBox">    
+             <!--Buy-->
+             <h1 class="moroccanLakeName">Buy Page</h1>
+             <div class="sell" onclick="buyAreaFunction()">Buy Area</div>
+             <div class="buy" onclick="buyRodPageFunction()">Buy Rods</div>
+            <h1 class="returnBar"onclick="buyBoxFunction()">Return</h1>
+        </div>
+        <div class="mainBox4 screen" id="buyAreaBox">
+            <!--Buy areas-->
+            <h1 class="moroccanLakeName">Buy Areas</h1>
+            <h1 class="returnBar"onclick="buyAreaFunction()">Return</h1>
+        </div>
+        <div class="mainBox4 screen" id="buyRodBox">
+                <!--Buy rods-->
+                <h1 class="moroccanLakeName">Buy Rods</h1>
+                <p id="buyLaythRod" class="sellBoxLook" onclick="buyLaythRod()">Layth Rod</p>
+            <h1 class="returnBar"onclick="buyRodPageFunction()">Return</h1>
         </div>
 		<div class="mainBox3 screen" id="moroccanBox">        
 			<h1 class="moroccanLakeName">Moroccan Lake</h1>
-			<input type="radio" name="rod" value="fishingRod" id="radioButtonFishingRod" ><span class="rodName">Fishing Rod</span>
-			<h1 class="submitButton" onclick="rodThrow()">Throw!</h1>
-            <h1 class="returnBar"onclick="morrocanLakeFunction()">Return</h1>
+            <input type="radio" name="rod" value="fishingRod" id="radioButtonFishingRod" ><span class="rodName">Standred Samak Rod</span></br>
+            <input type="radio" name="rod" value="fishingRod" id="radioButtonGGMRod" ><span class="rodName">Layth Rod</span></br>
+            <input type="radio" name="rod" value="fishingRod" id="radioButtonBTRod" ><span class="rodName">Premium Rod</span>
+			<h1 class="submitButton" onclick="rodThrowMoroccanLake()">Throw!</h1>
+            <h1 class="returnBar" onclick="moroccanLakeFunction()">Return</h1>
         </div>
     </body>
     <script rel="text/javascript" src="script.js"></script>
