@@ -1,4 +1,16 @@
-*{
-	padding:0;
-	margin: 0;
+.searchButton{
+    background: #000000;
+    color: #ffffff;
+    width: 100px;
+    text-align: center;
+    display: block;
+    border: 1px solid #7d7d7d;
+}
+.searchButton:hover{
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
 }
