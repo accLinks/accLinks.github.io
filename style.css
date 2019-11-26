@@ -5,6 +5,9 @@
     text-align: center;
     display: block;
     border: 1px solid #7d7d7d;
+	position: relative;
+	left: 805px;
+	top: 55px;
 }
 .searchButton:hover{
     background: #ffffff;
@@ -14,3 +17,64 @@
 .hidden{
     display: none;
 }
+body{
+	background: #ff7347;
+}
+ul li{
+	text-decoration: none;
+}
+.engineName{
+	font-family: 'Rajdhani', sans-serif;
+	width: 600px;
+	font-size: 80px;
+	position: relative;
+	left: 450px;
+	top: 150px;
+	
+}
+.inputBoxPosition{
+	width: 500px;
+	position: relative;
+	left: 450px;
+	top: 100px;
+}
+
+.inputBox{
+	width: 350px;
+	height: 30px;
+	text-align: center;
+}
+.result a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.result{
+	width: 100px;
+	position: relative;
+	left: 500px;
+	top: 80px;
+	color: #ffffff;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
