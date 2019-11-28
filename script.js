@@ -1,142 +1,66 @@
-var computerInfo = website("Computer Info", "Lorem ipsum, dolor sit amet computer adipisicing elit. Omnis computer computer computer non voluptas quisquam, csharp csharp computer placeat vel computer minus. Beatae pariatur computer computer computer computer computer computer rerum, computer computer nemo.", "pageOne.html", "_blank", 0 ); //website INFO, helps search 
-var javaGuide = website("Java Guides", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis atque quia computer non voluptas java guides, java guide java guide computer java guides csharp guide minus. Beatae java guides molestias laudantium rerum, computer corporis nemo.", "pageTwo.html", "_blank", 0 );
-var dummySiteList = website("Error 0", "dummy", "#", "_blank", 0 );
-var flowerShop = website("Flower Shop", "Flower shop dolor sit amet consectetur shop elit. Odit dolorum, flower ipsum vel non eum ex odio temporibus soluta maiores perferendis cupiditate aspernatur assumenda explicabo enim obcaecati animi accusamus magnam?", "flowerShop.html", "_blank", 0 );
-var javaTutorial = website("Java Tutorial", "Lorem ipsum Java sit Java Tutorial tutorial elit. Odit tutorial, voluptatem ipsum vel non java tutorial odio temporibus soluta maiores perferendis cupiditate aspernatur assumenda explicabo enim obcaecati animi accusamus magnam?", "javaTurotial.html", "_blank", 0 );
-var siteList = [dummySiteList, computerInfo, javaGuide, flowerShop, javaTutorial];
+var answer;//global var for answer
+var randomNumOne;//global var for numOne
+var randomNumTwo;//global var for numTwo
+var userScore;//int to keep track of user score
+var totalCorrectAnswer;//int to keep track of total correct answer
+var totalIncorrectAnswer;//int to keep track of total incorrent answer
+var userStreak;//int to keep track of total streak
+var highestAnswerStreak = 0;//used to keep track of highest streak
 
-function searchFunction(){//triggers to search something
-    let searchValue = document.getElementById('searchBoxId').value + ' ';
-    searchValue.toLowerCase;
-	var endWordNum = 0;
-    let word = "";
-	let searchWord = "";
-	if(searchValue.includes(' ')){
-			for (let listLength = 0; listLength < siteList.length; listLength++){
-			for(let e = 0; e < searchValue.length; e++){
-				const searchChar = searchValue.charAt(e);
-				
-				
-				if(searchChar != ' ' && endWordNum < searchValue.length){
-					searchWord += searchChar;
-					endWordNum += 1;
-					console.log(`This is end word num ${endWordNum}`);
-				}else if(searchChar == ' ' || endWordNum > searchValue.length){
-					for(let m = 0; m < siteList.length; m++){
-						
-						let webDesc = siteList[m].description;
-						webDesc.toLowerCase;//makes it lower
-						for(let i = 0; i < webDesc.length; i++){
-							
-							let currentChar = webDesc.charAt(i);
-							
-							if(currentChar != ' '){
-								word += currentChar; //builds up word
-							}else if(currentChar == ' '){ 
-								
-								
-								if(searchWord.includes(word)){//checks if word is one that user searched for
-								siteList[m].webScore += 1;
-								
-								
-								
-								}
-								word = "";
-							}
-							
-						}
-						
-						
-						console.log(searchWord);
-					}
-					 
-					 searchWord = "";
-				}
-				
-				console.log(`This is searchWord${searchWord}`);
-			
-			}
-			
-			endWordNum = 0;
-			console.log(siteList[3].webScore);
-		}
-	}
+function submitButtonFunction(){
+    let textBoxValue = document.getElementById('answerBoxId').value; //gets users answer
+    if(textBoxValue == answer){
+        totalCorrectAnswer++;//increments total correct answer by one
+        userStreak++;//increments user streak by one
+        userScore += 1 + (userStreak * 2) //formula for user score
+        if(userStreak > highestAnswerStreak){//checks user streak is higher then highest streak and if it is, it updates it
+            highestAnswerStreak = userStreak;//updates highest streak by changing it to current streak
+        }
+        document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
+        document.getElementById('userScoreCommentId').innerHTML = userScore;//displays user score they answer the equation
+        document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
+    }else{//if answer is incorrect
+        userStreak = 0;//resets user streak
+        totalIncorrectAnswer++;//increments total incorrect answers
+        document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
+        document.getElementById('userScoreCommentId').innerHTML = userScore;//displays user score they answer the equation
+        document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
+    }
+}
+function toggleHidden(){
+    document.getElementById('hiddenButtonId').classList.toggle('hidden');//Shows the equation on click along with answer box and submit button 
+    randomNumOne = randomNumber(1, 10);//gets first num 
+    randomNumTwo = randomNumber(1, 10);//gets second num
+    document.getElementById('numOneId').innerHTML = randomNumOne;//Shows the first number of equation
+    document.getElementById('numTwoId').innerHTML = randomNumTwo;//Shows the second number of equation  
+}
+function randomNumber(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+function additionSignFunction(){//function that lets the user add numOne and numTwo
+    answer = randomNumOne + randomNumTwo; //sets answer to the sum of numOne and numTwo
+}
+function subtractionSignFunction(){//function that lets the user subtract
+    answer = randomNumOne - randomNumTwo;//difference of numOne and numTwo
     
-    // for(let i = 0; i < siteList.length; i++){
-    //     let n = 0;
-    //     if(i > 0){
-    //         n = i-1;
-    //     }
-
-    //     if(siteList[i].webScore > siteList[n].webScore){
-            
-    //         let websiteInfoDisplay = document.getElementById('result');
-    //         websiteInfoDisplay.innerHTML = siteList[i].name;
-    //         websiteInfoDisplay.setAttribute("href", siteList[i].link);
-    //         websiteInfoDisplay.setAttribute("target", siteList[i].target);
-    //     }
-    // }
-	
-    /*siteList.sort(sortFunction);
-	console.log(siteList)
-    //if(siteList[0].name == "Dummy"){
-    siteList.reverse();
-	console.log(siteList);
-    //}*/
-	let num = 0;
-	//let displayWebsite = siteList[num];
-	
-	
-	
-	
-	numTwo = siteList.length;
-	for(let i = 0; i < siteList.length; i++){
-		if(siteList[i].webScore > siteList[num].webScore){
-			num = i;
-			console.log(`The highest score is ${siteList[num].name} and ${siteList[num].webScore}`);
-			
-			
-		}	
-	}
-
-        let websiteInfoDisplay = document.getElementById('result');
-            websiteInfoDisplay.innerHTML = siteList[num].name;
-            websiteInfoDisplay.setAttribute("href", siteList[num].link);
-            websiteInfoDisplay.setAttribute("target", siteList[num].target);
-	for (let i = 0; i < siteList.length; i++){
-		siteList[i].webScore = 0;
-	}
 }
-
-function website(name, description, link, target, webScore){
-	description.toLowerCase;
-    return{name, description, link, target, webScore};
+function multiplicationSignFunction(){//function that lets the user multiply numOne and numTwo
+    answer = randomNumOne * randomNumTwo;//sets answer to the product of numOne and numTwo
 }
-function sortFunction(x){
-    return x.webScore;
+function divisionSignFunction(){//function that lets the user divide numOne by numTwo
+    answer = randomNumOne / randomNumTwo;//quotent of numOne and numTwo
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function newEquationFunction(){//function to regenerate the equation
+    randomNumOne = randomNumber(1, 10);//gets first num 
+    randomNumTwo = randomNumber(1, 10);//gets second num
+    document.getElementById('numOneId').innerHTML = randomNumOne;//Shows the first number of equation
+    document.getElementById('numTwoId').innerHTML = randomNumTwo;//Shows the second number of equation  
+}
+function seeScoreBoard(){//function to see scoreboard
+    document.getElementById('scoreBoardId').classList.toggle('hiddenScoreBoard');//gets element then triggers css display hidden
+    document.getElementById('totalCorrectAnswerId').innerHTML = totalCorrectAnswer;//displays users number of correct by getting inner html based on id then changing it to the variable for correct answer
+    document.getElementById('totalIncorrectAnswerId').innerHTML = totalIncorrectAnswer;//displays users number of incorrect answers by getting inner html and changing it to the variable for incorrect answer
+    document.getElementById('highestAnswerStreakId').innerHTML = highestAnswerStreak;//displays users highest answer streak by getting element by id then changing it to the variable for highest streak
+}

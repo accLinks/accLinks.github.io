@@ -1,80 +1,24 @@
-.searchButton{
-    background: #000000;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.submitButton{
+    background: #575757;
     color: #ffffff;
     width: 100px;
     text-align: center;
+    border: 1px solid #000000;
     display: block;
-    border: 1px solid #7d7d7d;
-	position: relative;
-	left: 805px;
-	top: 55px;
 }
-.searchButton:hover{
+.submitButton:hover{
     background: #ffffff;
-    color: #000000;
-    cursor: pointer;
+    color: #575757;
+    cursor: default;
 }
 .hidden{
     display: none;
 }
-body{
-	background: #ff7347;
+.hiddenScoreBoard{
+    display: none;
 }
-ul li{
-	text-decoration: none;
-}
-.engineName{
-	font-family: 'Rajdhani', sans-serif;
-	width: 600px;
-	font-size: 80px;
-	position: relative;
-	left: 450px;
-	top: 150px;
-	
-}
-.inputBoxPosition{
-	width: 500px;
-	position: relative;
-	left: 450px;
-	top: 100px;
-}
-
-.inputBox{
-	width: 350px;
-	height: 30px;
-	text-align: center;
-}
-.result a{
-	color: #ffffff;
-	text-decoration: none;
-}
-.result{
-	width: 100px;
-	position: relative;
-	left: 500px;
-	top: 80px;
-	color: #ffffff;
-	font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
