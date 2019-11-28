@@ -19,12 +19,14 @@ function submitButtonFunction(){
         document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
         document.getElementById('userScoreCommentId').innerHTML = `Your current score is ${userScore}`;//displays user score they answer the equation
         document.getElementById('userStreakCommentId').innerHTML = `Your current streak is ${userStreak}`;//displays users correct answer streak after they answer the equation
+        answer = "Error 0";//resets answer
     }else{//if answer is incorrect
         userStreak = 0;//resets user streak
         totalIncorrectAnswer--;//increments total incorrect answers
         document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
         document.getElementById('userScoreCommentId').innerHTML = userScore;//displays user score they answer the equation
         document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
+        answer = "Error 0";//resets answer
     }
 }
 function toggleHidden(){
