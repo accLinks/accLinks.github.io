@@ -11,8 +11,8 @@ function submitButtonFunction(){
     let textBoxValue = document.getElementById('answerBoxId').value; //gets users answer
     if(textBoxValue == answer){
         totalCorrectAnswer += 1;//increments total correct answer by one
-        userStreak += 1;//increments user streak by one
         userScore += 1 + (userStreak * 2); //formula for user score
+        userStreak += 1;//increments user streak by one
         if(userStreak > highestAnswerStreak){//checks user streak is higher then highest streak and if it is, it updates it
             highestAnswerStreak = userStreak;//updates highest streak by changing it to current streak
         }
