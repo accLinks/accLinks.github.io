@@ -2,26 +2,26 @@ var answer;//global var for answer
 var randomNumOne;//global var for numOne
 var randomNumTwo;//global var for numTwo
 var userScore = 0;//int to keep track of user score
-var totalCorrectAnswer;//int to keep track of total correct answer
-var totalIncorrectAnswer;//int to keep track of total incorrent answer
-var userStreak;//int to keep track of total streak
+var totalCorrectAnswer = 0;//int to keep track of total correct answer
+var totalIncorrectAnswer = 0;//int to keep track of total incorrent answer
+var userStreak = 0;//int to keep track of total streak
 var highestAnswerStreak = 0;//used to keep track of highest streak
 
 function submitButtonFunction(){
     let textBoxValue = document.getElementById('answerBoxId').value; //gets users answer
     if(textBoxValue == answer){
-        totalCorrectAnswer++;//increments total correct answer by one
-        userStreak++;//increments user streak by one
-        userScore = 1 + (userStreak * 2) //formula for user score
+        totalCorrectAnswer += 1;//increments total correct answer by one
+        userStreak += 1;//increments user streak by one
+        userScore += 1 + (userStreak * 2); //formula for user score
         if(userStreak > highestAnswerStreak){//checks user streak is higher then highest streak and if it is, it updates it
             highestAnswerStreak = userStreak;//updates highest streak by changing it to current streak
         }
         document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
-        document.getElementById('userScoreCommentId').innerHTML = userScore;//displays user score they answer the equation
-        document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
+        document.getElementById('userScoreCommentId').innerHTML = `Your current score is ${userScore}`;//displays user score they answer the equation
+        document.getElementById('userStreakCommentId').innerHTML = `Your current streak is ${userStreak}`;//displays users correct answer streak after they answer the equation
     }else{//if answer is incorrect
         userStreak = 0;//resets user streak
-        totalIncorrectAnswer++;//increments total incorrect answers
+        totalIncorrectAnswer--;//increments total incorrect answers
         document.getElementById('answerCommentId').innerHTML = `Corrent the answer was ${answer}`;//says weather the answer was corrent or incorrect
         document.getElementById('userScoreCommentId').innerHTML = userScore;//displays user score they answer the equation
         document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
