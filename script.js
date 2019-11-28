@@ -28,9 +28,11 @@ function submitButtonFunction(){
         document.getElementById('userStreakCommentId').innerHTML = userStreak;//displays users correct answer streak after they answer the equation
         answer = "Error 0";//resets answer
     }
+    function toggleHidden();//gets new equation
+
 }
 function toggleHidden(){
-    document.getElementById('hiddenButtonId').classList.toggle('hidden');//Shows the equation on click along with answer box and submit button 
+    //document.getElementById('hiddenButtonId').classList.toggle('hidden');//Shows the equation on click along with answer box and submit button 
     randomNumOne = randomNumber(1, 10);//gets first num 
     randomNumTwo = randomNumber(1, 10);//gets second num
     document.getElementById('numOneId').innerHTML = randomNumOne;//Shows the first number of equation
