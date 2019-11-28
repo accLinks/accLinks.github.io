@@ -1,7 +1,7 @@
 var answer;//global var for answer
 var randomNumOne;//global var for numOne
 var randomNumTwo;//global var for numTwo
-var userScore;//int to keep track of user score
+var userScore = 0;//int to keep track of user score
 var totalCorrectAnswer;//int to keep track of total correct answer
 var totalIncorrectAnswer;//int to keep track of total incorrent answer
 var userStreak;//int to keep track of total streak
@@ -12,7 +12,7 @@ function submitButtonFunction(){
     if(textBoxValue == answer){
         totalCorrectAnswer++;//increments total correct answer by one
         userStreak++;//increments user streak by one
-        userScore += 1 + (userStreak * 2) //formula for user score
+        userScore = 1 + (userStreak * 2) //formula for user score
         if(userStreak > highestAnswerStreak){//checks user streak is higher then highest streak and if it is, it updates it
             highestAnswerStreak = userStreak;//updates highest streak by changing it to current streak
         }
