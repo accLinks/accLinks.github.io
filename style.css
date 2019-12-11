@@ -1,4 +1,49 @@
 *{
-	padding:0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+.navBar{
+    background: #ff9861;
+    width: 1fr;
+    height: 100vh;
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    position: relative;
+    top: 150px;
+}
+ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Rajdhani', sans-serif;
+}
+ul li a:hover{
+    
+}
+.screenBody{
+    background: #f2f2f2;
+}
+.hidden{
+    display: none;
+}
+.logInButton{
+    width: 100px;
+    height: 20px;
+    background: #000000;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    border: 1px solid #000000;
+}
+.logInButton:hover{
+    background: #ffffff;
+    cursor: pointer;
+    color: #000000;
+
 }
